@@ -3,10 +3,14 @@ A **D**ataset for **I**dentifying **C**ommonsense **E**rrors in E-Commerce Knowl
 
 ## Description
 DICE aims at evaluating model abilities of identifying commonsense errors in E-commerce knowledge graph. It contains 9,229 concept pairs extracted from AliCoCo (Alibaba E-commerce Cognitive Concept). DICE has already been split into train/dev/test set. In these three files,  each line contains a label and two similar concepts, split by "\t", such as:
-- 1 特大码帆布鞋  中长款帆布鞋
-- -1  一次性音响  多功能音响
+- 1 cotten linen biscuits (棉麻饼干) *vs* whole wheat biscuits (全麦饼干)
+- -1 disposable speaker (一次性音响)  (多功能音响)
 
 The label is either **1** or **-1**, where **1** indicates that the first concept is more plausible, **-1** indicates that the second concept is more plausible. 
+
+## How to use
+- Combine all concepts together and get 9,229\*2=18,458 concepts. Use it to train a model which accepts a concept each time and predicts it have commonsense contradiction or not.
+- Use current splitted train/dev/test set to train model which accepts two concepts each time and selects a more plausible one.
 
 ## Analysis
 ### Character numbers
@@ -32,6 +36,3 @@ According to the self-contradictory property, concepts can also be classified in
 |		Time | 1.9 | summer teakettle (夏季烧水壶) *vs* winter teakettle (冬天烧水壶) |
 |		Other | 1.1 | transparent suit pant (透明西装裤) *vs* grey suit pant (灰色西装裤) |
 
-## How to use
-- Combine all concepts together and get 9,229\*2=18,458 concepts. Use it to train a model which accepts a concept each time and predicts it have commonsense contradiction or not.
-- Use current splitted train/dev/test set to train model which accepts two concepts each time and selects a more plausible one.
