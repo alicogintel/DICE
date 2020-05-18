@@ -3,7 +3,7 @@ A **D**ataset for **I**dentifying **C**ommonsense **E**rrors in E-Commerce Knowl
 
 ## Description
 DICE aims at evaluating model abilities of identifying commonsense errors in E-commerce knowledge graph. It contains 9,229 concept pairs extracted from AliCoCo (Alibaba E-commerce Cognitive Concept). DICE has already been split into train/dev/test set. In these three files,  each line contains a label and two similar concepts, split by "\t", such as:
-- 1 cotten linen biscuits (棉麻饼干)  whole wheat biscuits (全麦饼干)
+- 1 whole wheat biscuits (全麦饼干)  cotten linen biscuits (棉麻饼干)
 - -1 disposable speaker (一次性音响)  multifunctional speaker(多功能音响)
 
 The label is either **1** or **-1**, where **1** indicates that the first concept is more plausible, **-1** indicates that the second concept is more plausible. 
